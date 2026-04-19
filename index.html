@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Despertar da Riqueza Divina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- ⚙️ CONFIGURAÇÕES RÁPIDAS ⚙️ -->
+    <script>
+        const FACEBOOK_PIXEL_ID = "1300407568698064";
+        const GOOGLE_ADS_ID = "AW-18102472151";
+        const GOOGLE_ANALYTICS_ID = "G-NX5W0W76Y6";
+        const CHECKOUT_URL = "https://payfast.greenn.com.br/5gdfv4z";
+    </script>
+    
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1300407568698064');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1300407568698064&ev=PageView&noscript=1"/></noscript>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NX5W0W76Y6"></script>
+    <!-- Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102472151"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NX5W0W76Y6');
+        gtag('config', 'AW-18102472151');
+    </script>
+    
+    <style>
+        :root {
+            --gold-primary: #c5a059;
+            --gold-secondary: #f9d976;
+            --deep-black: #050505;
+            --mystic-glow: rgba(197, 160, 89, 0.2);
+        }
+
+        body {
+            background-color: var(--deep-black);
+            color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+
+        /* Background Cinematográfico */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to bottom, #f9d976 0%, #c5a059 50%, #8a6d3b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.3));
+        }
+
+        /* Chat Container de Elite */
+        .chat-container {
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-bottom: 25px;
+        }
+
+        .message.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .bot-msg {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 20px 25px;
+            border-radius: 4px 20px 20px 20px;
+            align-self: flex-start;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(12px);
+            position: relative;
+        }
+
+        .bot-msg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(45deg, transparent, rgba(197, 160, 89, 0.05), transparent);
+            pointer-events: none;
+        }
+
+        /* Botões de Decisão */
+        .user-option {
+            background: linear-gradient(135deg, #c5a059 0%, #8a6d3b 100%);
+            color: #000;
+            font-weight: 800;
+            padding: 18px 30px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 12px;
+            text-align: center;
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid #f9d976;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            font-size: 13px;
+        }
+
+        .user-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(197, 160, 89, 0.4);
+            background: linear-gradient(135deg, #f9d976 0%, #c5a059 100%);
+        }
+
+        /* Barra de Progresso Minimalista */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.05);
+            z-index: 100;
+        }
+
+        #progress-fill {
+            height: 100%;
+            background: var(--gold-primary);
+            width: 0%;
+            transition: width 0.8s ease;
+            box-shadow: 0 0 15px var(--gold-primary);
+        }
+
+        /* Typing Indicator */
+        .typing {
+            display: flex;
+            gap: 6px;
+            padding: 10px;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Social Proof Pop */
+        .proof-pop {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(10, 10, 10, 0.95);
+            border: 1px solid var(--gold-primary);
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #fff;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Entrega de Valor - Cards */
+        .value-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .timer-badge {
+            background: #7f1d1d;
+            color: #fecaca;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* ===== MOBILE RESPONSIVO ===== */
+        .bot-msg {
+            word-break: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+        }
+
+        @media (max-width: 480px) {
+            .chat-container {
+                padding: 24px 14px;
+            }
+
+            .bot-msg {
+                padding: 16px 16px;
+                font-size: 14px;
+            }
+
+            .user-option {
+                padding: 16px 16px;
+                letter-spacing: 1px;
+                font-size: 12px;
+            }
+
+            /* Heading principal menor em telas pequenas */
+            .hero-title {
+                font-size: 1.6rem !important;
+                line-height: 1.2 !important;
+            }
+
+            /* Preço menor em mobile */
+            .price-display {
+                font-size: 2.8rem !important;
+            }
+
+            /* Social proof não vaza pela lateral */
+            .proof-pop {
+                left: 10px;
+                right: 10px;
+                bottom: 16px;
+                max-width: calc(100vw - 20px);
+                font-size: 11px;
+                padding: 10px 14px;
+            }
+
+            .value-card {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-title {
+                font-size: 1.35rem !important;
+            }
+            .price-display {
+                font-size: 2.4rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bg-canvas"></div>
+
+    <div class="progress-container">
+        <div id="progress-fill"></div>
+    </div>
+
+    <div class="chat-container" id="chat-flow">
+        <!-- Injetado via JS -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('bg-canvas', {
+            "particles": {
+                "number": { "value": 40, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#c5a059" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.2, "random": true },
+                "size": { "value": 2, "random": true },
+                "move": { "enable": true, "speed": 0.5, "direction": "top", "random": true, "straight": false, "out_mode": "out" }
+            }
+        });
+
+        const chatFlow = document.getElementById('chat-flow');
+        const progressFill = document.getElementById('progress-fill');
+
+        const steps = [
+            {
+                id: 'start',
+                messages: [
+                    { type: 'bot', text: '<div class="text-center mb-6"><span class="text-[10px] tracking-[0.3em] text-gold-primary uppercase opacity-60">Acesso Restrito</span><h1 class="hero-title text-4xl font-cinzel font-black gold-gradient-text mt-2 leading-tight">O PODER DIVINO DA PROSPERIDADE</h1></div>' },
+                    { type: 'bot', text: 'Pare por 60 segundos. O que você está prestes a ler não é um anúncio, é uma <b>convocação</b>.' },
+                    { type: 'bot', text: 'Você sente que existe uma riqueza imensa destinada a você, mas parece que as portas estão trancadas por dentro?' }
+                ],
+                options: [
+                    { text: 'Sinto que estou bloqueado. Quero as chaves. 🗝️', next: 'dor' }
+                ]
+            },
+            {
+                id: 'dor',
+                messages: [
+                    { type: 'bot', text: 'A maioria das pessoas vive como <b>mendigos espirituais</b>. Elas têm o DNA do Criador, mas imploram por migalhas.' },
+                    { type: 'bot', text: 'Dívidas, escassez e medo não são "vontade de Deus". São <b>vírus mentais</b> instalados na sua consciência.' },
+                    { type: 'bot', text: 'Você vai continuar aceitando o resto, ou vai ativar o banquete que já é seu por direito?' }
+                ],
+                options: [
+                    { text: 'Chega de migalhas! Quero o banquete. 🔥', next: 'solucao' }
+                ]
+            },
+            {
+                id: 'solucao',
+                messages: [
+                    { type: 'bot', text: 'O que eu vou te entregar não é um "ebook de dicas". É um <b>Sistema de Ativação Vibracional</b>.' },
+                    { type: 'bot', text: 'São 17 códigos sagrados que, quando lidos na ordem certa, dissolvem bloqueios de gerações em minutos.' },
+                    { type: 'bot', text: 'Você está pronto para ver o que acontece quando você sintoniza na frequência do ouro?' }
+                ],
+                options: [
+                    { text: 'O que exatamente eu vou receber? 💎', next: 'entrega' }
+                ]
+            },
+            {
+                id: 'entrega',
+                messages: [
+                    { type: 'bot', text: '<b class="gold-gradient-text text-lg">O SEU ARSENAL DE TRANSFORMAÇÃO DIVINA:</b>' },
+                    { type: 'bot', text: '<div class="value-card">👑 <b>O EBOOK "O PODER DIVINO DA PROSPERIDADE" (Guia Mestre):</b> As 17 Ativações Sagradas que vão reprogramar seu DNA financeiro, quebrar maldições geracionais de pobreza e abrir os portais da riqueza ilimitada. <span class="text-gold-primary">(Valor Inestimável: R$ 197)</span></div>' },
+                    { type: 'bot', text: '<div class="value-card">🔥 <b>BÔNUS EXCLUSIVO #1: O Ritual de 7 Dias para Atrair Dinheiro Inesperado:</b> Um guia prático, passo a passo, para manifestar abundância em tempo recorde. Prepare-se para o choque! <span class="text-gold-primary">(Valor: R$ 97)</span></div>' },
+                    { type: 'bot', text: '<div class="value-card">✨ <b>BÔNUS EXCLUSIVO #2: O Mapa da Riqueza:</b> Descubra como a numerologia sagrada pode revelar seu caminho único para a fortuna e como construir seu império financeiro. <span class="text-gold-primary">(Valor: R$ 47)</span></div>' },
+                    { type: 'bot', text: '<div class="value-card">⚡ <b>BÔNUS EXCLUSIVO #3: Acesso Vitalício às Atualizações:</b> O Universo está em constante expansão, e seu conhecimento também estará. Receba todas as futuras ativações e bônus sem custo adicional. <span class="text-gold-primary">(Valor: R$ 147)</span></div>' },
+                    { type: 'bot', text: 'O valor total desse arsenal de poder é de <b>R$ 488,00</b>. Mas o Universo tem um plano maior para você hoje.' }
+                ],
+                options: [
+                    { text: 'Qual o investimento para o meu despertar? ✨', next: 'oferta' }
+                ]
+            },
+            {
+                id: 'oferta',
+                messages: [
+                    { type: 'bot', text: '<div class="timer-badge">⚠️ OFERTA ÚNICA DE LANÇAMENTO</div>' },
+                    { type: 'bot', text: 'Você não vai pagar R$ 488. Nem R$ 197. Nem mesmo R$ 97.' },
+                    { type: 'bot', text: '<div class="text-center py-4"><span class="opacity-50 line-through text-sm">De R$ 488,00</span><br><span class="text-xs tracking-widest">POR APENAS</span><div class="price-display text-5xl font-black gold-gradient-text my-2">R$ 47,00</div><span class="text-[10px] opacity-60">OU 5X DE R$ 10,15</span></div>' },
+                    { type: 'bot', text: 'Isso é menos que o valor de um lanche para mudar sua linhagem familiar para sempre.' },
+                    { type: 'bot', text: '🛡️ <b>RISCO ZERO:</b> Se em 7 dias você não sentir uma mudança brutal na sua energia, eu te devolvo o dinheiro e você fica com o material. Eu confio no Poder Divino.' }
+                ],
+                options: [
+                    { text: 'QUERO MINHA RIQUEZA AGORA - R$ 47 💳', next: 'final' }
+                ]
+            },
+            {
+                id: 'final',
+                messages: [
+                    { type: 'bot', text: '<b>A DECISÃO FOI TOMADA.</b>' },
+                    { type: 'bot', text: 'O portal está aberto. Ao clicar abaixo, você será direcionado para o checkout seguro e receberá acesso imediato no seu e-mail.' },
+                    { type: 'bot', text: 'Não deixe o medo da escassez te roubar essa oportunidade. O Universo recompensa a coragem.' }
+                ],
+                options: [
+                    { text: 'ATIVAR MEU PODER AGORA! 🔥', url: CHECKOUT_URL }
+                ]
+            }
+        ];
+
+        async function renderStep(stepId) {
+            const step = steps.find(s => s.id === stepId);
+            const stepIndex = steps.indexOf(step);
+            progressFill.style.width = `${((stepIndex + 1) / steps.length) * 100}%`;
+
+            document.querySelectorAll('.user-option').forEach(el => el.remove());
+
+            for (const msg of step.messages) {
+                const typing = document.createElement('div');
+                typing.className = 'message bot-msg typing show';
+                typing.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+                chatFlow.appendChild(typing);
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+                await new Promise(r => setTimeout(r, 800 + Math.random() * 700));
+                typing.remove();
+
+                const msgDiv = document.createElement('div');
+                msgDiv.className = 'message bot-msg';
+                msgDiv.innerHTML = msg.text;
+                chatFlow.appendChild(msgDiv);
+                setTimeout(() => msgDiv.classList.add('show'), 50);
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+
+            const optDiv = document.createElement('div');
+            optDiv.className = 'message show w-full';
+            step.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'user-option';
+                btn.innerText = opt.text;
+                btn.onclick = () => opt.url ? window.location.href = opt.url : renderStep(opt.next);
+                optDiv.appendChild(btn);
+            });
+            chatFlow.appendChild(optDiv);
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // Prova Social de Elite
+        const names = ["Ricardo", "Helena", "Marcos", "Beatriz", "Felipe"];
+        const cities = ["SP", "RJ", "MG", "PR", "BA"];
+        function showProof() {
+            const p = document.createElement('div');
+            p.className = 'proof-pop';
+            p.innerHTML = `<span>👑</span> <div><b>${names[Math.floor(Math.random()*5)]} (${cities[Math.floor(Math.random()*5)]})</b><br>acabou de ativar a prosperidade.</div>`;
+            document.body.appendChild(p);
+            setTimeout(() => { p.style.opacity = '0'; setTimeout(() => p.remove(), 600); }, 4000);
+        }
+        setInterval(showProof, 15000);
+
+        renderStep('start');
+    </script>
+</body>
+</html>
